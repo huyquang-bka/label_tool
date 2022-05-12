@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from UiLabel import UiLabel
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -42,15 +43,15 @@ class Ui_MainWindow(object):
         self.btn_open_dataset = QtWidgets.QPushButton(self.tab)
         self.btn_open_dataset.setGeometry(QtCore.QRect(30, 10, 101, 23))
         self.btn_open_dataset.setObjectName("btn_open_dataset")
-        self.pushButton_2 = QtWidgets.QPushButton(self.tab)
-        self.pushButton_2.setGeometry(QtCore.QRect(140, 10, 101, 23))
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.pushButton_3 = QtWidgets.QPushButton(self.tab)
-        self.pushButton_3.setGeometry(QtCore.QRect(250, 10, 101, 23))
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.pushButton_4 = QtWidgets.QPushButton(self.tab)
-        self.pushButton_4.setGeometry(QtCore.QRect(360, 10, 101, 23))
-        self.pushButton_4.setObjectName("pushButton_4")
+        self.btn_overlap = QtWidgets.QPushButton(self.tab)
+        self.btn_overlap.setGeometry(QtCore.QRect(140, 10, 101, 23))
+        self.btn_overlap.setObjectName("btn_overlap")
+        self.btn_sort = QtWidgets.QPushButton(self.tab)
+        self.btn_sort.setGeometry(QtCore.QRect(250, 10, 101, 23))
+        self.btn_sort.setObjectName("btn_sort")
+        self.btn_begin = QtWidgets.QPushButton(self.tab)
+        self.btn_begin.setGeometry(QtCore.QRect(360, 10, 101, 23))
+        self.btn_begin.setObjectName("btn_begin")
         self.tabWidget.addTab(self.tab, "")
         self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -63,17 +64,16 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.btn_open_dataset.setText(_translate("MainWindow", "Open dataset"))
-        self.pushButton_2.setText(_translate("MainWindow", "Overlap"))
-        self.pushButton_3.setText(_translate("MainWindow", "Sort"))
-        self.pushButton_4.setText(_translate("MainWindow", "Begin"))
+        self.btn_overlap.setText(_translate("MainWindow", "Overlap"))
+        self.btn_sort.setText(_translate("MainWindow", "Sort"))
+        self.btn_begin.setText(_translate("MainWindow", "Begin"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Label"))
 
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     MainWindow = QtWidgets.QMainWindow()
+#     ui = Ui_MainWindow()
+#     ui.setupUi(MainWindow)
+#     MainWindow.show()
+#     sys.exit(app.exec_())
